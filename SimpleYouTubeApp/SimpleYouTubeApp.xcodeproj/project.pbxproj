@@ -12,6 +12,7 @@
 		202CCA192946CE1F003364FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202CCA182946CE1F003364FB /* Assets.xcassets */; };
 		202CCA1D2946CE1F003364FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202CCA1C2946CE1F003364FB /* Preview Assets.xcassets */; };
 		202CCA272946CE1F003364FB /* SimpleYouTubeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202CCA262946CE1F003364FB /* SimpleYouTubeAppTests.swift */; };
+		202CCA462946D005003364FB /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 202CCA452946D005003364FB /* RswiftLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202CCA462946D005003364FB /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,8 +115,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				202CCA422946CF9D003364FB /* PBXTargetDependency */,
 			);
 			name = SimpleYouTubeApp;
+			packageProductDependencies = (
+				202CCA452946D005003364FB /* RswiftLibrary */,
+			);
 			productName = SimpleYouTubeApp;
 			productReference = 202CCA112946CE1B003364FB /* SimpleYouTubeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +171,10 @@
 				Base,
 			);
 			mainGroup = 202CCA082946CE1B003364FB;
+			packageReferences = (
+				202CCA3F2946CF63003364FB /* XCRemoteSwiftPackageReference "SwiftFormat" */,
+				202CCA402946CF8C003364FB /* XCRemoteSwiftPackageReference "R" */,
+			);
 			productRefGroup = 202CCA122946CE1B003364FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,6 +229,10 @@
 			isa = PBXTargetDependency;
 			target = 202CCA102946CE1B003364FB /* SimpleYouTubeApp */;
 			targetProxy = 202CCA232946CE1F003364FB /* PBXContainerItemProxy */;
+		};
+		202CCA422946CF9D003364FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 202CCA412946CF9D003364FB /* RswiftGenerateInternalResources */;
 		};
 /* End PBXTargetDependency section */
 
@@ -345,6 +359,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NiceTube;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -364,12 +379,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronniev.SimpleYouTubeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Debug;
 		};
@@ -386,6 +401,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NiceTube;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -405,12 +421,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronniev.SimpleYouTubeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Release;
 		};
@@ -495,6 +511,37 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		202CCA3F2946CF63003364FB /* XCRemoteSwiftPackageReference "SwiftFormat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicklockwood/SwiftFormat";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		202CCA402946CF8C003364FB /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		202CCA412946CF9D003364FB /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		202CCA452946D005003364FB /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 202CCA402946CF8C003364FB /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 202CCA092946CE1B003364FB /* Project object */;
 }

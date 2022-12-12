@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "r.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mac-cain13/R.swift",
+      "state" : {
+        "branch" : "master",
+        "revision" : "dd8e73b6c0930859bb53902822a5773bd2ae2537"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "fddd1c00396eed152c45a46bea9f47b98e59301d",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swiftformat",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicklockwood/SwiftFormat",
+      "state" : {
+        "branch" : "master",
+        "revision" : "da637c398c5d08896521b737f2868ddc2e7996ae"
+      }
+    },
+    {
+      "identity" : "xcodeedit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomlokhorst/XcodeEdit",
+      "state" : {
+        "revision" : "cd466d6e8c5ffd2f2b61165d37b0646f09068e1e",
+        "version" : "2.9.0"
+      }
+    }
+  ],
+  "version" : 2
+}
