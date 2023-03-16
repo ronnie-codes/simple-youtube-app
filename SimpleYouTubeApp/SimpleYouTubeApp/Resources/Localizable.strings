@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  SimpleYouTubeApp
+*/
+
+// MARK: - Shared
+"shared.greeting" = "Welcome to NiceTube!";
+
+// MARK: - Account
+"account.title" = "Account";
+"account.success.message" = "You're signed in!";
+
+// MARK: - Home
+"home.title" = "Home";
+
+// MARK: - Subscriptions
+"subscriptions.title" = "Subscriptions";
+
+// MARK: - Library
+"library.title" = "Library";
+
+// MARK: - History
+"history.title" = "History";
+
+// MARK: - Watch Later
+"watchLater.title" = "Watch Later";
+
+// MARK: - Liked Videos
+"likedVideos.title" = "Liked Videos";

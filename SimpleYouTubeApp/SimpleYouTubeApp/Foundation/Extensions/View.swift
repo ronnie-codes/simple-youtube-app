@@ -1,0 +1,49 @@
+//
+//  View.swift
+//  SimpleYouTubeApp
+//
+
+import SwiftUI
+
+extension View {
+    // Reference(25:56): https://www.youtube.com/watch?v=uC3X4FoielU
+    func iOS<Content: View>(_ modifier: (Self) -> Content) -> some View {
+        #if os(iOS)
+            return modifier(self)
+        #else
+            return self
+        #endif
+    }
+
+    func tvOS<Content: View>(_ modifier: (Self) -> Content) -> some View {
+        #if os(tvOS)
+            return modifier(self)
+        #else
+            return self
+        #endif
+    }
+
+    func macOS<Content: View>(_ modifier: (Self) -> Content) -> some View {
+        #if os(macOS)
+            return modifier(self)
+        #else
+            return self
+        #endif
+    }
+
+    func watchOS<Content: View>(_ modifier: (Self) -> Content) -> some View {
+        #if os(watchOS)
+            return modifier(self)
+        #else
+            return self
+        #endif
+    }
+
+    func refreshable(action: @escaping () -> Void) -> some View {
+        toolbar {
+            Button(action: action) {
+                Image(systemName: "arrow.clockwise")
+            }
+        }
+    }
+}

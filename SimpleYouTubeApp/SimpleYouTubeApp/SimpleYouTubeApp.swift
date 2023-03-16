@@ -9,7 +9,10 @@ import SwiftUI
 struct SimpleYouTubeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ModuleContainer(modules: [
+                AccountRouterDefault.createModule(),
+                HomeRouterDefault.createModule(),
+            ])
         }
     }
 }
